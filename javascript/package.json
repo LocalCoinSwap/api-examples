@@ -1,0 +1,14 @@
+{
+  "name": "localcoinswap-cryptography",
+  "version": "1.0.0",
+  "description": "Cryptography demonstrations for LocalCoinSwap",
+  "main": "index.js",
+  "author": "Nathan Worsley",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25"
+  }
+}
