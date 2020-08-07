@@ -48,5 +48,7 @@ crypto_worker = AES.new(
     AES.MODE_CBC,
     encrypted_mnemonic_iv
 )
-mnemonic = crypto_worker.decrypt(bytes.fromhex(encrypted_mnemonic)).hex()[0:296]
+mnemonicHex = crypto_worker.decrypt(bytes.fromhex(encrypted_mnemonic)).hex()[0:296]
+mnemonic = bytes.fromhex(mnemonicHex).decode('utf-8')
+print("Decrypted mnemonic hex", mnemonicHex)
 print("Decrypted mnemonic", mnemonic)
