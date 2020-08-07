@@ -37,7 +37,16 @@ account_key = crypto_worker.decrypt(bytes.fromhex(encrypted_account_key)).hex()[
 print("Decrypted account key", account_key)
 
 # Generate secret key for mnemonic with a SHA3 hash
-secret_key = keccak.new(digest_bits=512)
+secret_key = keccak.new(digest_bits=256)
 secret_key.update('{}encryption'.format(account_key).encode('utf-8'))
 mnemonic_secret_key = secret_key.hexdigest()
 print("mnemonicSecretKey", mnemonic_secret_key, len(mnemonic_secret_key))
+
+# Use initialization vector and secret key to decrypt the mnemonic
+crypto_worker = AES.new(
+    bytes.fromhex(mnemonic_secret_key),
+    AES.MODE_CBC,
+    encrypted_mnemonic_iv
+)
+mnemonic = crypto_worker.decrypt(bytes.fromhex(encrypted_mnemonic)).hex()[0:296]
+print("Decrypted mnemonic", mnemonic)

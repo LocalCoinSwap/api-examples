@@ -40,7 +40,7 @@ async function decryptEncryptedBlob() {
   console.log(`Decrypted account key ${accountKeyHexString}`);
 
   // Generate secret key for mnemonic with a SHA3 hash
-  const mnemonicSecretKey = CryptoJS.SHA3(`${accountKeyHexString}encryption`);
+  const mnemonicSecretKey = CryptoJS.SHA3(`${accountKeyHexString}encryption`, { outputLength: 256 });
   console.log(`mnemonicSecretKey ${mnemonicSecretKey}`);
 
   // Use initialization vector and secret key to decrypt the mnemonic
