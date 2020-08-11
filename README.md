@@ -6,11 +6,11 @@ This repository is updated with examples based only on requests from users of th
 
 ### Current examples
 
-(Python)
-Decrypting mnemonic from encrypted blob endpoint
+(Python)  
+Decrypting mnemonic from encrypted blob endpoint  
 Get wallet addresses from exchange
 
-(Javascript)
+(Javascript)  
 Decrypting mnemonic from encrypted blob endpoint
 
 ### Installation
