@@ -2,3 +2,4 @@ javascript/node_modules
 javascript/.env
 python/.python-version
 python/.env
+__pycache__
