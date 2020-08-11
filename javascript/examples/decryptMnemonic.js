@@ -1,6 +1,6 @@
 import axios from "axios";
 import CryptoJS from "crypto-js";
-import { apiToken, exchangePassword } from './config';
+import { apiToken, exchangePassword } from '../config.js';
 
 
 async function decryptEncryptedBlob() {

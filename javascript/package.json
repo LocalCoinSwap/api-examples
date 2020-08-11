@@ -6,9 +6,16 @@
   "author": "Nathan Worsley",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "axios": "^0.19.2",
+    "babel-preset-env": "^1.7.0",
     "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.10.5"
   }
 }

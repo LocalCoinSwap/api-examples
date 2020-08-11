@@ -23,7 +23,7 @@ ACCOUNT_PASSWORD=<Password for exchange>
 
 Run examples:
 ```
-node index.js
+babel-node examples/decryptMnemonic.js
 ```
 
 Python:
@@ -37,5 +37,5 @@ pip3 install -r requirements.txt
 
 Run examples:
 ```
-python examples.py
+python examples/decrypt_mnemonic.py
 ```
