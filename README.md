@@ -1,10 +1,17 @@
-## LocalCoinSwap Cryptography
+## LocalCoinSwap API Examples
 
-This is a simple demonstration of some of the cryptography underpinning the LocalCoinSwap exchange. You can use this to perform various trading functionality offline, or work with the private keys to your account.
+This is a simple demonstration of some of the functionality of the LocalCoinSwap API. You can our API to automate trades, or work with the private keys to your account.
 
-You can use the examples contained in this repository to verify that LocalCoinSwap does not have access to your non-custodial private keys. As developers will see from the code, your password which is used for decrypting private keys is never sent to us. Instead, it is used for decrypting the private keys which we store on your behalf after you encrypt them and send them to us.
+This repository is updated with examples based only on requests from users of the API. If you are confused about how to do something with our API then raise a Github issue and we will add an example for you. Whatever your use-case, don't be afraid to raise an issue.
 
-(This is a similar setup used by many non-custodial wallet providers)
+### Current examples
+
+(Python)
+Decrypting mnemonic from encrypted blob endpoint
+Get wallet addresses from exchange
+
+(Javascript)
+Decrypting mnemonic from encrypted blob endpoint
 
 ### Installation
 
@@ -38,4 +45,5 @@ pip3 install -r requirements.txt
 Run examples:
 ```
 python examples/decrypt_mnemonic.py
+python examples/wallet_addresses.py
 ```
