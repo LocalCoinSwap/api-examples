@@ -123,6 +123,7 @@ Here's a demonstration in JS. You can perform similar signing in Python or your 
 
 ```js
 import { ec } from 'elliptic'
+// Using "ethers": "^5.0.26" 
 import { computeAddress, serialize } from '@ethersproject/transactions'
 import { Bytes } from '@ethersproject/bytes'
 import { keccak256 } from '@ethersproject/keccak256'
