@@ -102,7 +102,7 @@ Response:
 
 ```
 
-In the above response, `escrow_unsigned_tx` is the important bit. Sign this and make another API call to the same endpoint with following payload.
+In the above response, `escrow_unsigned_tx` is the important bit. Sign this and make another API call to the same endpoint with following payload. There maybe more keys in the response, only the important ones are shown above.
 
 #### Part B: Seller signs transaction
 
@@ -122,8 +122,11 @@ Payload:
 Here's a demonstration in JS. You can perform similar signing in Python or your favorite language.
 
 ```js
+// Package
+// "ethereumjs-abi": "^0.6.8",
+// "ethereumjs-util": "^7.0.7",
+// "ethers": "^5.0.26",
 import { ec } from 'elliptic'
-// Using "ethers": "^5.0.26" 
 import { computeAddress, serialize } from '@ethersproject/transactions'
 import { Bytes } from '@ethersproject/bytes'
 import { keccak256 } from '@ethersproject/keccak256'
