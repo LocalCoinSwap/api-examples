@@ -8,7 +8,7 @@ load_dotenv()
 
 api_token = os.getenv("API_TOKEN")
 exchange_password = os.getenv("ACCOUNT_PASSWORD")
-url = "https://localcoinswap.com/api/v2/profile/encrypted-blob/"
+url = "https://api.localcoinswap.com/api/v2/profile/encrypted-blob/"
 
 s = Session()
 s.headers.update({"Authorization": f"Token {api_token}"})
